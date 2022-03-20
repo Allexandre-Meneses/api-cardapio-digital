@@ -19,6 +19,13 @@ routes.put("/categoria", CategoriasController.update)
 routes.delete("/categoria", CategoriasController.delete)
 
 //ROTAS DO TIPO PRODUTO
+
 routes.post("/produto", ProdutosController.store)
+
+routes.get("/produto", ProdutosController.index)
+
+routes.put("/produto", ProdutosController.update)
+
+routes.delete("/produto", ProdutosController.delete)
 
 export default routes;

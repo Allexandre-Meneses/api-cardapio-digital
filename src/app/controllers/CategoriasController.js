@@ -1,10 +1,13 @@
 import Categoria from "../models/Categorias";
 
 class categoriaController {
+
   async index(req, res) {
+
     const categorias = await Categoria.findAll()
 
     return res.json(categorias)
+
   }
   async store(req, res) {
 
@@ -19,9 +22,11 @@ class categoriaController {
     );
 
     return res.json({id, name});
+
   }
 
   async update(req, res) {
+
     let categoria = await Categoria.findByPk(req.body.id)
 
     if (!categoria) {
@@ -33,6 +38,7 @@ class categoriaController {
     })
 
     return res.json(categoria)
+    
   }
 
   async delete(req, res) {
