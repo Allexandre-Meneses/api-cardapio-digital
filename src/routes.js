@@ -6,11 +6,19 @@ import ProdutosController from "./app/controllers/ProdutosController";
 const routes = new Router();
 
 routes.get("/", (req, res) => {
-  return res.json({ mensagem: "helo world" });
+  return res.json({ mensagem: "Api Cardapio Digital" });
 });
+// ROTAS DO TIPO CATEGORIA:
 
 routes.post("/categoria", CategoriasController.store)
 
+routes.get("/categoria", CategoriasController.index)
+
+routes.put("/categoria", CategoriasController.update)
+
+routes.delete("/categoria", CategoriasController.delete)
+
+//ROTAS DO TIPO PRODUTO
 routes.post("/produto", ProdutosController.store)
 
 export default routes;
