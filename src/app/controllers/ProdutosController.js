@@ -2,6 +2,14 @@ import Produto from "../models/Produtos";
 
 class produtoController {
 
+  async getUnico(req, res) {
+
+    const id = req.params.id
+    const produto = await Produto.findByPk(id)
+
+    return res.json(produto)
+  }
+
   async index(req, res) {
 
     const produtos = await Produto.findAll()

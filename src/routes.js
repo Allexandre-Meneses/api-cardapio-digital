@@ -34,6 +34,7 @@ routes.get("/categoria", cors(), CategoriasController.index)
 // ROTAS DO TIPO PRODUTO
 
 routes.get("/produto", cors(), ProdutosController.index)
+routes.get("/produto/:id", cors(), ProdutosController.getUnico)
 
 // TODAS AS ROTAS ABAIXO EXIGEM O TOKEN
 routes.use(AuthMiddleware);
