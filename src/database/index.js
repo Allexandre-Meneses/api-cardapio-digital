@@ -1,14 +1,18 @@
 import Sequelize from  'sequelize'
 
-import Admins from '../app/models/Admins'
-
 import Categoria from '../app/models/Categorias'
 
 import Produtos from '../app/models/Produtos'
 
+import Admins from '../app/models/Admins'
+
+import Pedidos from '../app/models/Pedidos'
+
+import Mesas from '../app/models/Mesas'
+
 import databaseConfig from '../config/database'
 
-const models = [Categoria, Produtos, Admins]
+const models = [Categoria, Produtos, Admins, Pedidos, Mesas]
 
 class Database{
   constructor(){
