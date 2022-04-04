@@ -30,6 +30,7 @@ routes.post("/login", cors(), SessionController.store)
 // ROTAS DO TIPO CATEGORIA:
 
 routes.get("/categoria", cors(), CategoriasController.index)
+routes.get("/categoria/:id", cors(), CategoriasController.getUnico)
 
 // ROTAS DO TIPO PRODUTO
 

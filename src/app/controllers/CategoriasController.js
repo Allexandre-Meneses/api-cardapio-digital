@@ -2,6 +2,15 @@ import Categoria from "../models/Categorias";
 
 class categoriaController {
 
+  async getUnico(req, res) {
+
+    const id = req.params.id
+    const categoria = await Categoria.findByPk(id)
+
+    return res.json(categoria)
+  }
+
+
   async index(req, res) {
 
     const categorias = await Categoria.findAll()
